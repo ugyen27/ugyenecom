@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+    <title>Details</title>
+   
+</head>
+<body>
+    <div class="container mt-5">
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img id="productimage" src="{{product_object.image}}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        {{product_object.title}} 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        {{product_object.price}} 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        {{product_object.discount_price}} 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        {{product_object.description}} 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5" id="foot">
+
+  <div style="background-color:black">
+    <div class="container" style="background-color: lightblue;">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Get connected with us & keep in Touch!</h6>
+        </div>
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3 dark-grey-text">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Online Company</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>online business without much effort and save your enery with full free delivery to your home</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" >Digital Gadgets</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" >Vegetables</a>
+        </p>
+        <p>
+          <a class="dark-grey-text">Cosmetics</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" >Fashions and Clothings</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Coming Soon</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" >New gaming Laptops</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" >Latest Fashion wears</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" >Solar Mobile Phones</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" >Electric Shoes</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact Us</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> Thimphu, city 10012, BT</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> ugyen@cyhker.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 975 17813453</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 975 7765743</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-black-50 py-3">© 2022 Copyright:
+    <a class="dark-grey-text" href="https://mdbootstrap.com/"> Onlinebusiness.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+    </div>
+</body>
+
+</html>

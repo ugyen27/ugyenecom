@@ -1,0 +1,28 @@
+.card-text{ 
+    color: green;
+    font-weight: 750;
+}
+.card-title{
+    font-weight: 800;
+}
+
+.list-group{
+    font-size: larger;
+    font-weight:500; 
+    font-family:sans-serif; 
+
+}
+#formdetail{
+    font-family: cursive;
+    font-weight: 500;
+}
+
+/* for the detail page */
+#productimage{
+    width: 250px;
+}
+body > div > div > div:nth-child(2){
+    font-family: cursive;
+    font-weight:bolder;
+    font-size: larger;
+}

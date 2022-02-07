@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+     <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+    <title>checkout</title>
+</head>
+<body>
+    <div class="container mt-2">
+        <h2 style="font-family: cursive; font-weight:bold">Your Checkout-items</h2> <br>
+        <div class="row">
+            <div class="col-md-12">
+            
+                <ul class="list-group" id="item_list">
+                   
+                </ul>
+            </div>
+        </div>
+        <br>
+        <h2>User Details</h2>
+        <div id="formdetail" class="row">
+            <div class="col-md-12">
+                <form method="POST">
+                   {% csrf_token %}
+                    <input type="hidden" id="items" name="items">
+                    <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label for="inputEmail4">Name</label>
+                    <input id="name" name="name"  type="text" class="form-control" id="inputEmail4" placeholder="Ugyen">
+                    </div>
+                    <div class="form-group col-md-6">
+                    <label for="inputPassword4">Email</label>
+                    <input id="email" name="email" type="text" class="form-control" id="inputPassword4" placeholder="Ugyen27@gmail.com" required>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input id="address" name="address" type="text" class="form-control" id="inputAddress" placeholder="79-colony Thimphu" required>
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label for="inputCity">Dzongkhag/City</label>
+                    <input id="city" name="city" type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                    <label for="inputState">Country</label>
+                    <input id="country" name="country" type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label for="inputZip">Zip-code</label>
+                    <input id="zipcode" name="zipcode" type="text" class="form-control" id="inputZip" required>
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label for="inputZip">Amount To be Paid</label>
+                    <input readonly="" type="text" class="form-control" id="total" name="total" >
+                    </div>
+                    </div>
+                    <button type="submit"  class="btn btn-primary">Place Order</button>
+                </form>
+            </div>
+        </div>
+        <br>
+        <!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5" id="foot">
+  <div style="background-color:black">
+    <div class="container" style="background-color: lightblue;">
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Get connected with us & keep in Touch!</h6>
+        </div>
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3 dark-grey-text">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Online Company</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>online business without much effort and save your enery with full free delivery to your home</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" >Digital Gadgets</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" >Vegetables</a>
+        </p>
+        <p>
+          <a class="dark-grey-text">Cosmetics</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" >Fashions and Clothings</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Coming Soon</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" >New gaming Laptops</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" >Latest Fashion wears</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" >Solar Mobile Phones</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" >Electric Shoes</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact Us</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> Thimphu, city 10012, BT</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> ugyen@cyhker.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 975 17813453</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 975 7765743</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-black-50 py-3">© 2022 Copyright:
+    <a class="dark-grey-text" href="https://mdbootstrap.com/"> Onlinebusiness.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+    </div>
+</body>
+<script type="text/javascript">
+if(localStorage.getItem('cart')==null){
+    var cart = {};
+}
+else{
+    cart = JSON.parse(localStorage.getItem('cart')); 
+    
+}
+let total = 0;
+for (item in cart){
+    let name = cart[item][1]; 
+    let quantity = cart[item][0];
+    let price = cart[item][2];
+    total += cart[item][2];
+
+    //storing both the name and quanity in one variable
+    itemString = `<li class="list-group-item"><span>${quantity} of </span>${name}</br><span class="badge badge-success badge-pill" >${price}</span></li>`
+    
+    $('#item_list').append(itemString);
+    
+}
+totalPrice = `<li class="list-group-item d-flex justify-content-between align-items-center"><b>Your Total:</b>
+${total}</li>`
+$('#total').val(total);
+$('#item_list').append(totalPrice);
+$('#items').val(JSON.stringify(cart));
+</script>
+</html>
